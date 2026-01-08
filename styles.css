@@ -288,14 +288,10 @@ ul {
 	grid-template-columns: 1fr 1fr;
 
 	.image {
-		height: 100%;
-		width: 100%;
-
 		background-image: url(assets/img/thai-intro.jpg);
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: contain;
-
 	}
 }
 
