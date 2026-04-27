@@ -701,6 +701,20 @@ nav {
     position: relative;
     /* decorative background or simple */
 }
+
+.info {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+
+    p {
+        flex: 1;
+        text-align: left;
+        line-height: 1.9;
+        color: #555;
+    }
+}
+
 .destinations-list-section {
     padding: 0 0 100px;
     background-color: #fdfbf7;
@@ -788,7 +802,7 @@ nav {
     position: relative;
     display: inline-block;
 }
-.destination-row p {
+.destination-row p, .info p {
     font-size: 1.05rem;
     color: #555;
     line-height: 1.9;
