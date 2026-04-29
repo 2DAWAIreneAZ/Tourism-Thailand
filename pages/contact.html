@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,128 +12,150 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+
+<body id="top">
     <header class="main-header">
         <nav class="container nav-container"> <!-- main-nav -->
             <div class="logo"><a href="../index.html">
-                <img src="../assets/img/thai-logo.png"></img>
-            </a></div>
+                    <img src="../assets/img/thai-logo.png"></img>
+                </a></div>
             <div class="nav-collapse">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="destinations.html">Top Destinations</a></li>
-                    <li><a href="routes.html">Tourist Routes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <ul class="nav-links">
+                <li><a class="hidden-logo" href="../index.html"><img src="../assets/img/thai-logo.png"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="destinations.html">Top Destinations</a></li>
+                <li><a href="routes.html">Tourist Routes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
 
-    <section class="routes-hero">
-        <div class="container text-center">
-            <h1>Plan Your Trip</h1>
-            <p>Let us help you create the perfect Thai experience, tailored to your interests and travel style.</p>
-        </div>
-    </section>
-
-    <section id="country-routes" class="country-routes-section">
-        <div class="container">
-            <h2 class="text-center">Routes by Country</h2>
-            <div class="route-tabs">
-                <button class="tab-btn active" data-target="route-spain">🇪🇸 Spain</button>
-                <button class="tab-btn" data-target="route-usa">🇺🇸 United States</button>
-                <button class="tab-btn" data-target="route-argentina">🇦🇷 Argentina</button>
-                <button class="tab-btn" data-target="route-australia">🇦🇺 Australia</button>
+        <section class="routes-hero">
+            <div class="container text-center">
+                <h1>Plan Your Trip</h1>
+                <p>Let us help you create the perfect Thai experience, tailored to your interests and travel style.</p>
             </div>
-            
-            <div class="tab-content-container">
-                <div id="route-spain" class="tab-content active">
-                    <h3>✈️ 1) From Spain → Route 1</h3>
-                    <h4>Bangkok – Kanchanaburi – Pattaya & Koh Larn</h4>
-                    <p><strong>International Flight</strong><br>Travel from major Spanish cities such as Madrid or Barcelona to Bangkok (Suvarnabhumi Airport – BKK). Flights usually include one stop in Europe or the Middle East.<br>Estimated total travel time: 12–14 hours, depending on the connection.</p>
-                    <p><strong>Transportation in Thailand</strong><br>Arrive in Bangkok and spend two days exploring the city.<br>Travel by bus, train, or private transfer to Kanchanaburi (approximately 2–3 hours).<br>Continue by road to Pattaya (around 2–3 hours).<br>From Pattaya, take a short ferry to Koh Larn.</p>
-                    <p><strong>Common Airlines</strong><br>Emirates, Qatar Airways, Turkish Airlines, Lufthansa, and Thai Airways.</p>
-                </div>
-                
-                <div id="route-usa" class="tab-content">
-                    <h3>✈️ 2) From the United States → Route 2</h3>
-                    <h4>Northern Thailand & Golden Triangle</h4>
-                    <p><strong>🇺🇸 International Flight</strong><br>Depart from major U.S. cities such as Los Angeles, New York, or Dallas to Bangkok, usually with one or two stopovers in Europe or Asia.<br>Estimated travel time: 18–24 hours.</p>
-                    <p><strong>🛬 Transportation in Thailand</strong><br>From Bangkok, take a domestic flight to Chiang Rai (about 1.5 hours).<br>Continue the route by minibus or car to the Golden Triangle, Pai, and Mae Hong Son.<br>Road travel in the north offers scenic mountain landscapes.</p>
+        </section>
+
+        <section id="country-routes" class="country-routes-section">
+            <div class="container">
+                <h2 class="text-center">Routes by Country</h2>
+                <div class="route-tabs">
+                    <button class="tab-btn active" data-target="route-spain">Spain</button>
+                    <button class="tab-btn" data-target="route-usa">United States</button>
+                    <button class="tab-btn" data-target="route-argentina">Argentina</button>
+                    <button class="tab-btn" data-target="route-australia">Australia</button>
                 </div>
 
-                <div id="route-argentina" class="tab-content">
-                    <h3>✈️ 3) From Argentina → Route 3</h3>
-                    <h4>Khao Sok – Koh Tao – Koh Phangan</h4>
-                    <p><strong>🇦🇷 International Flight</strong><br>Travel from Buenos Aires to Bangkok, Phuket, or Krabi, usually with two stopovers.<br>Flying directly to southern Thailand can reduce internal travel time.</p>
-                    <p><strong>🛬 Transportation in Thailand</strong><br>From Phuket or Krabi, travel by bus or private transfer to Khao Sok National Park (2–3 hours).<br>Continue to Surat Thani, then take a ferry to Koh Tao and Koh Phangan.</p>
-                    <p><strong>✈️ Alternative Airport</strong><br>Flights from Bangkok to Koh Samui are also available and provide easy access to nearby islands.</p>
-                </div>
+                <div class="tab-content-container">
+                    <div id="route-spain" class="tab-content active">
+                        <h3>From Spain → Route 1</h3>
+                        <h4>Bangkok – Kanchanaburi – Pattaya & Koh Larn</h4>
+                        <p><strong>International Flight</strong>
+                            Travel from major Spanish cities such as Madrid or
+                            Barcelona to Bangkok (Suvarnabhumi Airport – BKK). Flights usually include one stop in
+                            Europe or the Middle East. </p>
 
-                <div id="route-australia" class="tab-content">
-                    <h3>✈️ 4) From Australia → Route 2 or Route 3</h3>
-                    <h4>Northern Thailand or Southern Islands</h4>
-                    <p><strong>🇦🇺 International Flight</strong><br>Fly from cities such as Sydney, Melbourne, or Brisbane to Bangkok or Phuket, often with direct flights or one short stopover.</p>
-                    <p><strong>🛬 Transportation in Thailand</strong><br>For Route 2 (Northern Thailand): fly domestically from Bangkok to Chiang Rai.<br>For Route 3 (Southern Thailand): arrive in Phuket or Bangkok and continue by bus and ferry to islands and national parks.</p>
+                        <p>Estimated total travel time: 12–14 hours, depending on the connection.</p>
+                        
+                        <p><strong>Transportation in Thailand</strong>
+                            Arrive in Bangkok and spend two days exploring
+                            the city.<br>Travel by bus, train, or private transfer to Kanchanaburi (approximately 2–3
+                            hours).<br>Continue by road to Pattaya (around 2–3 hours).<br>From Pattaya, take a short
+                            ferry to Koh Larn.</p>
+
+                        <p><strong>Common Airlines</strong>
+                            Emirates, Qatar Airways, Turkish Airlines, Lufthansa, and Thai Airways.</p>
+                    </div>
+
+                    <div id="route-usa" class="tab-content">
+                        <h3>From the United States → Route 2</h3>
+                        <h4>Northern Thailand & Golden Triangle</h4>
+                        <p><strong>International Flight</strong>
+                            Depart from major U.S. cities such as Los
+                            Angeles, New York, or Dallas to Bangkok, usually with one or two stopovers in Europe or
+                            Asia.</p>
+
+                        <p>Estimated travel time: 18–24 hours.</p>
+                        <p><strong>Transportation in Thailand</strong>From Bangkok, take a domestic flight to
+                            Chiang Rai (about 1.5 hours).<br>Continue the route by minibus or car to the Golden
+                            Triangle, Pai, and Mae Hong Son.<br>Road travel in the north offers scenic mountain
+                            landscapes.</p>
+                    </div>
+
+                    <div id="route-argentina" class="tab-content">
+                        <h3>From Argentina → Route 3</h3>
+                        <h4>Khao Sok – Koh Tao – Koh Phangan</h4>
+                        <p><strong>International Flight</strong>
+                            Travel from Buenos Aires to Bangkok, Phuket, or
+                            Krabi, usually with two stopovers. Flying directly to southern Thailand can reduce
+                            internal travel time.</p>
+                        <p><strong>Transportation in Thailand</strong>From Phuket or Krabi, travel by bus or
+                            private transfer to Khao Sok National Park (2–3 hours).<br>Continue to Surat Thani, then
+                            take a ferry to Koh Tao and Koh Phangan.</p>
+                        <p><strong>Alternative Airport</strong>Flights from Bangkok to Koh Samui are also
+                            available and provide easy access to nearby islands.</p>
+                    </div>
+
+                    <div id="route-australia" class="tab-content">
+                        <h3>From Australia → Route 2 or Route 3</h3>
+                        <h4>Northern Thailand or Southern Islands</h4>
+                        <p><strong>International Flight</strong>Fly from cities such as Sydney, Melbourne, or
+                            Brisbane to Bangkok or Phuket, often with direct flights or one short stopover.</p>
+                        <p><strong>Transportation in Thailand</strong>For Route 2 (Northern Thailand): fly
+                            domestically from Bangkok to Chiang Rai.<br>For Route 3 (Southern Thailand): arrive in
+                            Phuket or Bangkok and continue by bus and ferry to islands and national parks.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Get in Touch with Us</h2>
-                    <p>Planning your trip to Thailand? We're here to help answer your questions and ensure your
-                        journey is as magical as the destination itself.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="icon">📍</span>
-                            <div>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get in Touch with Us</h2>
+                        <p>Planning your trip to Thailand? We're here to help answer your questions and ensure your
+                            journey is as magical as the destination itself.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
                                 <h4>Visit Us</h4>
                                 <p>123 Bangkok Blvd, Thailand</p>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="icon">📞</span>
-                            <div>
+                            <div class="contact-item">
                                 <h4>Call Us</h4>
                                 <p>+66 2 123 4567</p>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="icon">✉️</span>
-                            <div>
+                            <div class="contact-item">
                                 <h4>Email Us</h4>
                                 <p>info@thailand-tourism.com</p>
                             </div>
                         </div>
                     </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
     <footer class="main-footer">
         <div class="container footer-grid">
@@ -175,6 +198,15 @@
             </div>
         </div>
     </footer>
+    <button class="scrollToTop">
+        <a href="#top">
+            <svg viewBox="0 0 24 24" class="arrow">
+                <path d="M12 4 L12 20" />
+                <path d="M5 11 L12 4 L19 11" />
+            </svg>
+        </a>
+    </button>
     <script src="../script.js"></script>
 </body>
+
 </html>

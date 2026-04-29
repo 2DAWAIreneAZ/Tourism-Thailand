@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="top">
 	<header class="main-header">
 		<nav class="container nav-container">
 			<div href="index.html" class="logo"><a href="index.html">
@@ -26,12 +26,13 @@
 				<span></span>
 			</div>
 			
-				<ul class="nav-links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="pages/destinations.html">Top Destinations</a></li>
-					<li><a href="pages/routes.html">Tourist Routes</a></li>
-					<li><a href="pages/contact.html">Contact</a></li>
-				</ul>
+            <ul class="nav-links">
+                <li><a class="hidden-logo" href="index.html"><img src="assets/img/thai-logo.png"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/destinations.html">Top Destinations</a></li>
+                <li><a href="pages/routes.html">Tourist Routes</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
 		</nav>
 	</header>
 
@@ -357,6 +358,14 @@
             </div>
         </div>
     </footer>
+    <button class="scrollToTop">
+        <a href="#top">
+            <svg viewBox="0 0 24 24" class="arrow">
+                <path d="M12 4 L12 20" />
+                <path d="M5 11 L12 4 L19 11" />
+            </svg>
+        </a>
+    </button>
     <script src="script.js"></script>
 </body>
 </html>

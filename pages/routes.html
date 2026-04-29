@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body id="top">
     <header class="main-header">
 			<nav class="container nav-container">
 				<div class="logo"><a href="../index.html">
@@ -25,12 +25,13 @@
 					<span></span>
 				</div>
 				
-					<ul class="nav-links">
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="destinations.html">Top Destinations</a></li>
-						<li><a href="routes.html">Tourist Routes</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+                <ul class="nav-links">
+                    <li><a class="hidden-logo" href="../index.html"><img src="../assets/img/thai-logo.png"></a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="destinations.html">Top Destinations</a></li>
+                    <li><a href="routes.html">Tourist Routes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
 			</nav>
 		</header>
     <main>
@@ -40,139 +41,377 @@
                 <p>Curated itineraries to experience the best of Thailand's culture, history, and nature.</p>
             </div>
         </section>
-        <!-- Main Recommended Route: 6-Day Itinerary -->
-        <section class="timeline-section">
+
+        <section class="destinations-intro-section">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2>The Classic Route</h2>
-                    <p class="section-subtitle">A 6-Day Journey from Capital to Coast</p>
-                </div>
-                <div class="timeline">
-                    <!-- Day 1-2: Bangkok -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content">
-                            <span class="timeline-date">Day 1-2</span>
-                            <h3>Bangkok</h3>
-                            <div class="route-details">
-                                <span><i class="fas fa-clock"></i> 2 Days</span>
-                                <span><i class="fas fa-city"></i> Culture & City</span>
-                            </div>
-                            <p>Start in Thailand’s capital. Visit the Grand Palace, Wat Phra Kaew, Wat Pho, and Wat
-                                Arun. Explore local markets, take a boat ride along the Chao Phraya River, and enjoy
-                                famous street food.</p>
-                            <div class="highlights">
-                                <span class="badge">Grand Palace</span>
-                                <span class="badge">Wat Arun</span>
-                                <span class="badge">Street Food</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Day 3: Ayutthaya -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content">
-                            <span class="timeline-date">Day 3</span>
-                            <h3>Ayutthaya</h3>
-                            <div class="route-details">
-                                <span><i class="fas fa-history"></i> 1 Day</span>
-                                <span><i class="fas fa-train"></i> Train/Bus from BKK</span>
-                            </div>
-                            <p>Explore the ancient capital of the Kingdom of Siam. Visit impressive temple ruins and
-                                historical parks reflecting Thailand’s past. A calm contrast to Bangkok's energy.</p>
-                            <div class="highlights">
-                                <span class="badge">Temple Ruins</span>
-                                <span class="badge">History Park</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Day 4: Chiang Mai -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content">
-                            <span class="timeline-date">Day 4</span>
-                            <h3>Chiang Mai</h3>
-                            <div class="route-details">
-                                <span><i class="fas fa-plane"></i> 1 Day</span>
-                                <span><i class="fas fa-vihara"></i> North & Culture</span>
-                            </div>
-                            <p>Head north for traditional atmosphere. Visit historic temples in the old city, walk
-                                through local markets, and experience Northern Thai culture.</p>
-                            <div class="highlights">
-                                <span class="badge">Old City</span>
-                                <span class="badge">Night Bazaar</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Day 5-6: Krabi or Phuket -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content">
-                            <span class="timeline-date">Day 5-6</span>
-                            <h3>Krabi or Phuket</h3>
-                            <div class="route-details">
-                                <span><i class="fas fa-umbrella-beach"></i> 2 Days</span>
-                                <span><i class="fas fa-water"></i> Nature & Relax</span>
-                            </div>
-                            <p>End the journey in southern Thailand. Spend time on tropical beaches, explore islands,
-                                snorkel, or take boat tours. A peaceful conclusion to the trip.</p>
-                            <div class="highlights">
-                                <span class="badge">Beaches</span>
-                                <span class="badge">Island Hopping</span>
-                            </div>
-                        </div>
+                <div class="text-center">
+                    <h2>Popular Itineraries</h2>
+                    <div class="info">
+                        <p>
+                            Thailand offers a wide range of travel experiences, 
+                            from historic cities and cultural landmarks to 
+                            mountain landscapes and tropical islands. To help 
+                            visitors choose the journey that best matches their 
+                            interests, these routes combine some of the country’s 
+                            most iconic destinations into carefully planned 
+                            itineraries. Each one highlights a different side of 
+                            Thailand, whether you are looking for history, culture, 
+                            nature, or relaxation.
+                        </p>
+
+                        <p>
+                            These itineraries are designed to be both practical and 
+                            inspiring, making it easier to explore multiple regions 
+                            within a limited time. They include a mix of must-see 
+                            locations and lesser-known spots, giving a more complete 
+                            view of the country. Whether traveling for a few days or a 
+                            full week, each route offers a clear structure while 
+                            leaving room for personal discovery.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- More Routes Grid -->
         <section class="more-routes-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2>Explore More Itineraries</h2>
-                    <p class="section-subtitle">Discover other ways to see Thailand</p>
+                    <h2>Popular Itineraries</h2>
+                    <p class="section-subtitle">Discover ways to see Thailand</p>
+                    <div class="routes-grid">
+                    <!-- Card 1: Classic Route -->
+                    <div class="route-card">
+                        <div class="route-img" style="background-image: url('../assets/img/thai-hero.jpg')"></div>
+                        <div class="route-info">
+                            <h3>Classic Route — 6 Days</h3>
+                            <p>A complete introduction to Thailand, from Bangkok’s vibrant city life to Ayutthaya’s history, Chiang Mai’s culture, and southern beaches. Ideal for first-time visitors who want to experience the country’s highlights in a short time.</p>
+                            <a href="#" class="btn-text" data-switch-tab="route-classic">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Card 2: Central & Eastern -->
+                    <div class="route-card">
+                        <div class="route-img" style="background-image: url('../assets/img/thai-intro.jpg')"></div>
+                        <div class="route-info">
+                            <h3>Central & Eastern Thailand — 5 Days</h3>
+                            <p>A diverse route combining Bangkok’s landmarks, Kanchanaburi’s history and nature, and the coastal charm of Pattaya and Koh Larn. A great option for travelers looking for variety without long distances.</p>
+                            <a href="#" class="btn-text" data-switch-tab="route-central">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Card 3: Northern Thailand -->
+                    <div class="route-card">
+                        <div class="route-img" style="background-image: url('../assets/img/thai-religion.jpg')"></div>
+                        <div class="route-info">
+                            <h3>Northern Thailand & Golden Triangle — 7 Days</h3>
+                            <p>A scenic journey through northern Thailand, featuring Chiang Rai, the Golden Triangle, Pai, and Mae Hong Son. Perfect for travelers interested in culture, nature, and a slower pace of travel.</p>
+                            <a href="#" class="btn-text" data-switch-tab="route-north">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Card 4: Southern Islands -->
+                    <div class="route-card">
+                        <div class="route-img" style="background-image: url('../assets/img/thai.jpeg')"></div>
+                        <div class="route-info">
+                            <h3>Southern Islands & Nature — 7 Days</h3>
+                            <p>A tropical escape through Khao Sok National Park, Koh Tao, and Koh Phangan. It combines rainforest exploration with island life, beaches, and marine activities. Ideal for those seeking relaxation and adventure.</p>
+                            <a href="#" class="btn-text" data-switch-tab="route-south">View Details</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="routes-grid">
-                    <!-- Route 2 -->
-                    <div class="route-card">
-                        <div class="route-img" style="background-image: url('assets/img/thai-hero.jpg')"></div>
-                        <div class="route-info">
-                            <h3>Northern Adventure</h3>
-                            <p class="duration">7 Days · Chiang Mai, Chiang Rai, Pai</p>
-                            <p>Immerse yourself in the mountains, hill tribes, and coffee plantations of the North.</p>
-                            <a href="#" class="btn-text">View Details</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Main Recommended Route: 6-Day Itinerary -->
+        <section class="timeline-section">
+            <div class="container">
+
+                <div class="route-tabs">
+                    <button class="tab-btn active" data-target="route-classic">Classic Route</button>
+                    <button class="tab-btn" data-target="route-central">Central & Eastern</button>
+                    <button class="tab-btn" data-target="route-north">Northern Thailand</button>
+                    <button class="tab-btn" data-target="route-south">Southern Islands</button>
+                </div>
+
+                <div class="tab-content-container" style="max-width: 1000px; padding: 0; background: transparent; box-shadow: none;">
+                    <!-- Route: Classic Route -->
+                    <div id="route-classic" class="tab-content active">
+                        <div class="text-center mb-4">
+                            <h3>The Classic Route from Capital to Coast (6 days)</h3>
+                        </div>
+                        <div class="timeline">
+                            <!-- Day 1-2: Bangkok -->
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 1-2</span>
+                                    <h3>Bangkok</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-city"></i> Culture & City</span>
+                                    </div>
+                                    <p>Start in Thailand’s capital. Visit the Grand Palace, Wat Phra Kaew, Wat Pho, and Wat
+                                        Arun. Explore local markets, take a boat ride along the Chao Phraya River, and enjoy
+                                        famous street food.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Grand Palace</span>
+                                        <span class="badge">Wat Arun</span>
+                                        <span class="badge">Street Food</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Day 3: Ayutthaya -->
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 3</span>
+                                    <h3>Ayutthaya</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                                        <span><i class="fas fa-history"></i> History</span>
+                                    </div>
+                                    <p>Explore the ancient capital of the Kingdom of Siam. Visit impressive temple ruins and
+                                        historical parks reflecting Thailand’s past. A calm contrast to Bangkok's energy.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Temple Ruins</span>
+                                        <span class="badge">History Park</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Day 4: Chiang Mai -->
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 4</span>
+                                    <h3>Chiang Mai</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                                        <span><i class="fas fa-vihara"></i> North & Culture</span>
+                                    </div>
+                                    <p>Head north for traditional atmosphere. Visit historic temples in the old city, walk
+                                        through local markets, and experience Northern Thai culture.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Old City</span>
+                                        <span class="badge">Night Bazaar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Day 5-6: Krabi or Phuket -->
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 5-6</span>
+                                    <h3>Krabi or Phuket</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-umbrella-beach"></i> Nature & Relax</span>
+                                    </div>
+                                    <p>End the journey in southern Thailand. Spend time on tropical beaches, explore islands,
+                                        snorkel, or take boat tours. A peaceful conclusion to the trip.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Beaches</span>
+                                        <span class="badge">Island Hopping</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Route 3 -->
-                    <div class="route-card">
-                        <div class="route-img" style="background-image: url('assets/img/thai-intro.jpg')"></div>
-                        <div class="route-info">
-                            <h3>Island Hopping</h3>
-                            <p class="duration">10 Days · Phuket, Phi Phi, Krabi, Samui</p>
-                            <p>The ultimate tropical getaway, jumping from one paradise island to another.</p>
-                            <a href="#" class="btn-text">View Details</a>
+
+                    <!-- Route 1: Central & Eastern -->
+                    <div id="route-central" class="tab-content">
+                        <div class="text-center mb-4">
+                            <h3>Central & Eastern Thailand (5 days)</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 1-2</span>
+                                    <h3>Bangkok</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-city"></i> Culture & City</span>
+                                        <span><i class="fas fa-history"></i> History</span>
+                                    </div>
+                                    <p>Begin the route in Bangkok, Thailand’s vibrant capital. Visit major landmarks such as the Grand Palace and Wat Pho, explore traditional neighborhoods, and experience floating or night markets. The city offers a mix of history, modern life, and diverse cuisine that introduces visitors to Thai culture.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Grand Palace</span>
+                                        <span class="badge">Wat Pho</span>
+                                        <span class="badge">Night Markets</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 3</span>
+                                    <h3>Kanchanaburi</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                                        <span><i class="fas fa-history"></i> History</span>
+                                        <span><i class="fas fa-leaf"></i> Nature</span>
+                                    </div>
+                                    <p>Travel west to Kanchanaburi, a region known for its historical importance during World War II. Visit the Bridge over the River Kwai and nearby museums, and enjoy natural attractions such as waterfalls and rivers surrounded by jungle landscapes.</p>
+                                    <div class="highlights">
+                                        <span class="badge">River Kwai</span>
+                                        <span class="badge">Museums</span>
+                                        <span class="badge">Waterfalls</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 4-5</span>
+                                    <h3>Pattaya & Koh Larn</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-umbrella-beach"></i> Coastal</span>
+                                        <span><i class="fas fa-coffee"></i> Relaxation</span>
+                                    </div>
+                                    <p>Continue to the coast to Pattaya, a lively seaside city. Take a short ferry to Koh Larn, where white-sand beaches and turquoise waters offer relaxation and water activities. This area provides a coastal contrast to the cultural and historical destinations earlier in the route.</p>
+                                    <div class="highlights">
+                                        <span class="badge">White-sand Beaches</span>
+                                        <span class="badge">Turquoise Waters</span>
+                                        <span class="badge">Water Activities</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Route 4 -->
-                    <div class="route-card">
-                        <div class="route-img" style="background-image: url('assets/img/thai-religion.jpg')"></div>
-                        <div class="route-info">
-                            <h3>Cultural Deep Dive</h3>
-                            <p class="duration">12 Days · Isan Region & Ancient Cities</p>
-                            <p>Off the beaten path. Discover the authentic rural life and unseen history of the
-                                Northeast.</p>
-                            <a href="#" class="btn-text">View Details</a>
+
+                    <!-- Route 2: Northern Thailand -->
+                    <div id="route-north" class="tab-content">
+                        <div class="text-center mb-4">
+                            <h3>Northern Thailand & Golden Triangle (7 days)</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 1-2</span>
+                                    <h3>Chiang Rai</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-vihara"></i> Culture</span>
+                                        <span><i class="fas fa-vihara"></i> Temples</span>
+                                    </div>
+                                    <p>Start in Chiang Rai, a cultural hub in Northern Thailand. Visit unique temples such as the White Temple (Wat Rong Khun) and the Blue Temple, and explore local markets. The city’s calm atmosphere allows visitors to connect with northern traditions.</p>
+                                    <div class="highlights">
+                                        <span class="badge">White Temple</span>
+                                        <span class="badge">Blue Temple</span>
+                                        <span class="badge">Local Markets</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 3</span>
+                                    <h3>Golden Triangle</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 1 Day</span>
+                                        <span><i class="fas fa-history"></i> History</span>
+                                        <span><i class="fas fa-water"></i> River Views</span>
+                                    </div>
+                                    <p>Take a day trip to the Golden Triangle, where Thailand, Laos, and Myanmar meet. Learn about the region’s historical role in trade and culture, enjoy river views, and visit local museums that explain the area’s complex past.</p>
+                                    <div class="highlights">
+                                        <span class="badge">River Views</span>
+                                        <span class="badge">Museums</span>
+                                        <span class="badge">Border Views</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 4-5</span>
+                                    <h3>Pai</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-leaf"></i> Nature</span>
+                                        <span><i class="fas fa-couch"></i> Slow-paced</span>
+                                    </div>
+                                    <p>Travel through mountain roads to Pai, a small town surrounded by nature. Relax in hot springs, visit waterfalls, and enjoy scenic viewpoints. Pai is ideal for travelers looking for slow-paced tourism and outdoor activities.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Hot Springs</span>
+                                        <span class="badge">Waterfalls</span>
+                                        <span class="badge">Viewpoints</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 6-7</span>
+                                    <h3>Mae Hong Son</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                                        <span><i class="fas fa-users"></i> Local Life</span>
+                                    </div>
+                                    <p>Finish the route in Mae Hong Son, a remote town near the Myanmar border. Explore traditional temples, lakes, and surrounding mountains, and experience local life in one of Thailand’s least crowded regions.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Lakes</span>
+                                        <span class="badge">Traditional Temples</span>
+                                        <span class="badge">Remote Mountains</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Route 5 -->
-                    <div class="route-card">
-                        <div class="route-img" style="background-image: url('assets/img/thai.jpeg')"></div>
-                        <div class="route-info">
-                            <h3>Culinary Trail</h3>
-                            <p class="duration">8 Days · Bangkok, Ayutthaya, Chiang Mai</p>
-                            <p>A route designed for foodies. Cooking classes, street food tours, and market visits.</p>
-                            <a href="#" class="btn-text">View Details</a>
+
+                    <!-- Route 3: Southern Islands -->
+                    <div id="route-south" class="tab-content">
+                        <div class="text-center mb-4">
+                            <h3>Southern Islands & Nature (7 days)</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 1-2</span>
+                                    <h3>Khao Sok National Park</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-tree"></i> Rainforest</span>
+                                        <span><i class="fas fa-compass"></i> Adventure</span>
+                                    </div>
+                                    <p>Begin in southern Thailand with a visit to Khao Sok National Park, one of the oldest rainforests in the world. Enjoy boat tours on Cheow Lan Lake, jungle walks, and views of limestone cliffs, offering a strong connection to Thailand’s natural environment.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Rainforest</span>
+                                        <span class="badge">Cheow Lan Lake</span>
+                                        <span class="badge">Limestone Cliffs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 3-4</span>
+                                    <h3>Koh Tao</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 2 Days</span>
+                                        <span><i class="fas fa-fish"></i> Diving</span>
+                                        <span><i class="fas fa-water"></i> Marine Life</span>
+                                    </div>
+                                    <p>Continue to Koh Tao, a small island famous for diving and snorkeling. Spend time exploring coral reefs, relaxing on quiet beaches, and enjoying the island’s laid-back atmosphere.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Diving</span>
+                                        <span class="badge">Coral Reefs</span>
+                                        <span class="badge">Snorkeling</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Day 5-7</span>
+                                    <h3>Koh Phangan</h3>
+                                    <div class="route-details">
+                                        <span><i class="fas fa-clock"></i> 3 Days</span>
+                                        <span><i class="fas fa-umbrella-beach"></i> Beaches</span>
+                                        <span><i class="fas fa-leaf"></i> Island Living</span>
+                                    </div>
+                                    <p>End the journey on Koh Phangan, an island known for both peaceful beaches and vibrant social events. Visit waterfalls, viewpoints, and coastal villages, or simply relax by the sea to close the route at a slow and enjoyable pace.</p>
+                                    <div class="highlights">
+                                        <span class="badge">Waterfalls</span>
+                                        <span class="badge">Viewpoints</span>
+                                        <span class="badge">Relaxation</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
     <footer class="main-footer">
         <div class="container footer-grid">
@@ -216,6 +455,14 @@
             </div>
         </div>
     </footer>
+    <button class="scrollToTop">
+        <a href="#top">
+            <svg viewBox="0 0 24 24" class="arrow">
+                <path d="M12 4 L12 20" />
+                <path d="M5 11 L12 4 L19 11" />
+            </svg>
+        </a>
+    </button>
     <script src="../script.js"></script>
 </body>
 </html>
