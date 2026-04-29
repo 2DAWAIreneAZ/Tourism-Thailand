@@ -183,9 +183,7 @@ nav {
 	min-height: 700px;
 	width: 100%;
 
-	/* top: -4.25rem; */
-
-	background-image: url(assets/img/thai-hero.jpg);
+	background-image: url(assets/img/option-hero.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -255,11 +253,11 @@ nav {
 	align-items: center;
 	background: #fff;
 	color: var(--color-text-primary);
-	padding: 12px 30px;
+	padding: 10px 24px;
 	border-radius: 30px;
 
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
 	transition: transform 0.3s ease;
@@ -280,24 +278,6 @@ nav {
 	display: flex;
 	gap: 1.8rem;
 	margin-bottom: 6rem;
-}
-
-.glass-card {
-	display: flex;
-	align-items: center;
-
-	font-size: .75rem;
-	line-height: 1.4;
-
-	backdrop-filter: blur(2px);
-	border-radius: 3rem;
-
-	padding: 1rem 1.5rem;
-	max-width: 300px;
-
-	gap: 1rem;
-
-	color: white;
 }
 
 .card-icon {
@@ -327,7 +307,7 @@ nav {
     gap: 2rem;
 
 	.image {
-		background-image: url(assets/img/welcome-thai.jpg);
+		background-image: url(assets/img/thai-intro.jpg);
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -418,7 +398,7 @@ nav {
         .image-history {
             width: 100%; 
             height: 100%; 
-            object-fit: cover; 
+            object-fit: contain; 
         }
     } 
     
@@ -481,105 +461,268 @@ nav {
         margin-bottom: 25px;
     }
 }
-.food-grid {
+.food-bento-grid {
     display: grid;
-    grid-template-columns: 1fr 340px 1fr;
-    gap: 4rem;
-    align-items: center;
-    margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 320px);
+    gap: 1.5rem;
+    margin-top: 50px;
 }
-.food-column {
+
+.bento-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.bento-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.bento-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.bento-card:hover .bento-image-bg {
+    transform: scale(1.1);
+}
+
+.bento-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+    transition: background 0.3s ease;
+}
+
+.bento-card:hover .bento-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.bento-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    height: 100%;
 }
-.column-title {
-    font-family: var(--font-heading);
+
+.bento-content h4 {
     font-size: 1.8rem;
-    color: var(--color-accent-dark);
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-    &::after {
-        content: '';
-        display: block;
-        width: 40px;
-        height: 2px;
-        background: var(--color-accent);
-        margin-top: 10px;
-    }
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    color: #fff;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
 }
-.text-right .column-title::after {
-    margin-left: auto;
-}
-.food-item {
-    margin-bottom: 40px;
-    h4 {
-        font-family: var(--font-heading);
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-        color: var(--color-text-primary);
-    }
-    p {
-        font-size: 0.95rem;
-        color: var(--color-text-secondary);
-        line-height: 1.7;
-    }
-}
-.text-right .food-item {
-    text-align: right;
-}
-.food-image-frame {
-    position: relative;
-    height: 500px;
-    border-radius: 200px;
-    /* Arch/Pill shape */
+
+.bento-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    border: 5px solid #fff;
 }
-.food-center-img {
+
+.bento-card:hover .bento-content h4 {
+    transform: translateY(0);
+}
+
+.bento-card:hover .bento-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Grid Layout Placements */
+.card-pad-thai {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.card-pad-thai .bento-content h4 {
+    font-size: 2.5rem;
+}
+.card-pad-thai .bento-content p {
+    font-size: 1.1rem;
+    -webkit-line-clamp: 4;
+}
+
+.card-tom-yum {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.card-insects {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-durian {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-pad-thai .bento-image-bg { background-image: url('assets/img/pad-thai.jpg'); }
+.card-tom-yum .bento-image-bg { background-image: url('assets/img/tom-yum.jpg'); }
+.card-insects .bento-image-bg { background-image: url('assets/img/fried-insects.jpg'); }
+.card-durian .bento-image-bg { background-image: url('assets/img/durian.jpg'); }
+
+/* Responsive Food Section */
+@media (max-width: 1024px) {
+    .food-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    
+    .card-pad-thai,
+    .card-tom-yum {
+        grid-column: span 2;
+        grid-row: auto;
+        min-height: 400px;
+    }
+
+    .card-insects,
+    .card-durian {
+        grid-column: span 1;
+        grid-row: auto;
+        min-height: 300px;
+    }
+
+    .bento-content p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .bento-content h4 {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .food-bento-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-pad-thai,
+    .card-tom-yum,
+    .card-insects,
+    .card-durian {
+        grid-column: span 1;
+        min-height: 350px;
+    }
+}
+
+/* ---------------------------- WILDLIFE ---------------------------------- */
+.wildlife-section {
+    padding: 120px 0;
+    background-color: #fdfbf7;
+}
+
+.wildlife-intro {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 60px;
+}
+
+.wildlife-intro p {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+.animal-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.animal-card {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.animal-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.animal-img {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.animal-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-.food-image-frame:hover .food-center-img {
+
+.animal-card:hover .animal-img img {
     transform: scale(1.05);
 }
-/* Responsive Food Section */
-@media (max-width: 1024px) {
-    .food-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    }
-    .center-visual {
-        display: none;
-        /* Hide center image on tablets to save space or adjust layout */
-    }
-    .text-right .column-title::after {
-        margin-left: 0;
-    }
-    .text-right .food-item,
-    .text-right {
-        text-align: left;
-    }
+
+.animal-info {
+    flex: 1;
 }
+
+.animal-info h3 {
+    font-size: 2rem;
+    color: var(--color-accent-dark);
+    margin-bottom: 1rem;
+}
+
+.animal-info p {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
 @media (max-width: 768px) {
-    .food-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .wildlife-intro {
+        flex-direction: column;
+        gap: 1.5rem;
     }
-    .center-visual {
-        display: block;
-        order: -1;
-        /* Show image on top for mobile */
-        margin-bottom: 30px;
+    
+    .animal-card, .animal-card:nth-child(even) {
+        flex-direction: column;
+        gap: 2rem;
     }
-    .food-image-frame {
-        height: 300px;
-        border-radius: 20px;
-        /* Standard rounded corners for mobile */
+    
+    .animal-img {
         max-width: 100%;
+        height: 250px;
     }
 }
 
@@ -1221,15 +1364,46 @@ nav {
 
 
 
+@media (max-width: 950px) {
+    /* Hero Section */
+    .hero-section .hero-container-grid {
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
+    }
+    .hero-section .hero-content {
+        max-width: 100%;
+        margin-top: 5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section .hero-content p {
+        margin: 0 0 40px 0;
+    }
 
+    /* Intro Section */
+    .intro-section .intro-content {
+        grid-template-columns: 1fr;
+    }
+    .intro-section .intro-content .image {
+        min-height: 400px;
+    }
 
+    /* Culture Section */
+    .culture-section .culture-content {
+        grid-template-columns: 1fr;
+    }
+    .culture-section .culture-content .image-religion {
+        min-height: 400px;
+    }
+}
 
-
-
-@media (max-width: 768px) {
-	.header-container {
+@media (max-width: 720px) {
+	.nav-container {
 		justify-content: space-between;
-		padding: 0 20px;
+		padding: 15px 20px;
+		position: relative;
 	}
 
 	.logo {
@@ -1237,21 +1411,87 @@ nav {
 		transform: none;
 	}
 
-	.main-nav {
-		display: none;
+	.nav-collapse {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		cursor: pointer;
+        
 	}
 
+	.nav-collapse span {
+		width: 25px;
+		height: 3px;
+		background-color: var(--color-text-primary);
+		transition: all 0.3s ease;
+		transform-origin: center;
+	}
+
+	.nav-collapse.active span:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	
+	.nav-collapse.active span:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.nav-collapse.active span:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+        
+	}
+
+	.nav-links {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 105%;
+		left: 0;
+		width: 100%;
+        height: 300px;
+		background-color: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(5px);
+        
+        
+		padding: 30px 0;
+		gap: 2rem;
+		z-index: 100;
+		text-align: center;
+		align-items: center;
+		
+		/* Smooth dropdown animation */
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.nav-links a {
+		font-size: 1.1rem;
+		padding: 5px 10px;
+	}
+
+	.nav-links.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.hero-section {
+		min-height: 500px;
+		height: auto;
+		background-position: center;
+	}
+
+	.hero-content {
+		margin-top: 0;
+		padding: 4rem 0;
+	}
 
 	.hero-content h1 {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 	}
 
 	.history-content {
 		grid-template-columns: 1fr;
-	}
-
-	.header-container {
-		flex-direction: column;
-		gap: 20px;
 	}
 }
