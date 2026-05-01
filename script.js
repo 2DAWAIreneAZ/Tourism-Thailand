@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Tabs logic
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
     
@@ -21,11 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', () => {
                 const targetId = btn.getAttribute('data-target');
                 
-                // Remove active class from all
                 tabBtns.forEach(b => b.classList.remove('active'));
                 tabContents.forEach(c => c.classList.remove('active'));
                 
-                // Add active class to clicked
                 btn.classList.add('active');
                 document.getElementById(targetId).classList.add('active');
             });
@@ -43,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Switch tabs from external buttons (e.g. "View details" in routes grid)
     const switchTabBtns = document.querySelectorAll('[data-switch-tab]');
     if (switchTabBtns.length > 0) {
         switchTabBtns.forEach(btn => {
